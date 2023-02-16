@@ -1,12 +1,15 @@
-# Bitcoin Core API Service
+# Bitcoin Core HTTP RPC Wrapper Service
 
-This is a Node.js API service that acts as a wrapper for the Bitcoin Core HTTP RPC interface, providing a simple and convenient way to interact with a bitcoind instance using bitcoin-core.
+This is a Node.js API service that acts as a wrapper for the Bitcoin Core HTTP RPC interface, providing a simple and convenient way to interact with a [Bitcoin Core](https://bitcoin.org/en/bitcoin-core/) instance using [bitcoin-core](https://www.npmjs.com/package/bitcoin-core).
+
+
 
 ## Installation
 
 1. Install Node.js and npm (if not already installed).
-2. Install the required dependencies by running `npm install`.
-3. Create a `.env` file based on the `.env.example` file, and update the values to configure the connection settings for your bitcoind instance.
+2. Install Bitcoin Core by following the [instructions on the Bitcoin Core website](https://bitcoin.org/en/full-node). Make sure to configure the `bitcoin.conf` file with the appropriate settings, such as the RPC username and password.
+3. Install the required dependencies by running `npm install`.
+4. Create a `.env` file based on the `.env.example` file, and update the values to configure the connection settings for your Bitcoin Core instance.
 
 ## Configuration
 
