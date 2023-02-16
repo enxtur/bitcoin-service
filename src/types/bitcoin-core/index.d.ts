@@ -40,5 +40,9 @@ declare module "bitcoin-core" {
       }
     ): Promise<{ success: boolean; }[]>;
     sendRawTransaction(hex: string): Promise<string>;
+    getReceivedByAddress(
+      address: string,
+      minConfirmation?: number = 0
+    ): Promise<number>;
   }
 }
