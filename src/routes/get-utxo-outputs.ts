@@ -1,18 +1,8 @@
 import { Router } from "express";
-import Joi from "joi";
 import { bitcoinClient } from "../libs/bitcoin-core";
-import { validate } from "../middlewares/validator";
 
-const schema = Joi.object({
-  address: Joi.string().required(),
-})
-
-type Query = {
-  address: string;
-}
-
-export const getUtxoOutputsRouter = Router().get("/utxo-outputs", validate(schema), async (req, res) => {
-  const { address } = req.query as Query;
+export const getUtxoOutputsRouter = Router().get("/utxo-outputs/:address", async (req, res) => {
+  const { address } = req.params;
   try {
     const result = await bitcoinClient.listUnspent(0, 9999999, [address]);
     res.json(result);

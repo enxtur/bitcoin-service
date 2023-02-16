@@ -39,5 +39,6 @@ declare module "bitcoin-core" {
         rescan: boolean;
       }
     ): Promise<{ success: boolean; }[]>;
+    sendRawTransaction(hex: string): Promise<string>;
   }
 }
