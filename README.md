@@ -36,7 +36,7 @@ This will start the API service on port 3000 by default. You can change the port
 
 Returns the balance of the specified address.
 
-#### GET /api/utxo-outputs/:address
+#### GET /api/utxo/:address
 
 Returns the unspent transaction outputs (UTXOs) of the specified address.
 
