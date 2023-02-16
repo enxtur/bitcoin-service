@@ -55,3 +55,7 @@ Sends a raw Bitcoin transaction to the network.
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+## Acknowledgments
+
+This README file was generated with the assistance of [ChatGPT](https://openai.com/), a large language model trained by OpenAI. Thank you, ChatGPT!
