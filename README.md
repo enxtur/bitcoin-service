@@ -1,6 +1,6 @@
 # Bitcoin Core API Service
 
-This is a Node.js API service for interacting with a bitcoind instance using bitcoin-core.
+This is a Node.js API service that acts as a wrapper for the Bitcoin Core HTTP RPC interface, providing a simple and convenient way to interact with a bitcoind instance using bitcoin-core.
 
 ## Installation
 
