@@ -44,5 +44,6 @@ declare module "bitcoin-core" {
       address: string,
       minConfirmation?: number = 0
     ): Promise<number>;
+    getTransaction(txid: string, includeWatchonly?: boolean, verbose?: boolean): Promise<any>;
   }
 }

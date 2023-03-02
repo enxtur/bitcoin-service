@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getBalanceRouter } from "./get-balance";
+import { getTransactionRouter } from "./get-transaction";
 import { getUtxoOutputsRouter } from "./get-utxo-outputs";
 import { importAddressRouter } from "./import-address";
 import { importMultiRouter } from "./import-multi";
@@ -12,3 +13,4 @@ router.use(importAddressRouter);
 router.use(importMultiRouter);
 router.use(sendRawTransactionRouter);
 router.use(getBalanceRouter);
+router.use(getTransactionRouter);
