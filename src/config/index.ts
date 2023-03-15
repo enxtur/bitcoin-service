@@ -14,6 +14,9 @@ function configure() {
   if (!process.env.RPC_PASS) {
     throw new Error('RPC_PASS not set');
   }
+  if (!process.env.ZMQ_URI) {
+    throw new Error('ZMQ_URI not set');
+  }
   return {
     port: process.env.PORT || 3000,
     rpc: {
@@ -22,7 +25,10 @@ function configure() {
       port: process.env.RPC_PORT,
       username: process.env.RPC_USER,
       password: process.env.RPC_PASS,
-    }
+    },
+    zmq: {
+      uri: process.env.ZMQ_URI,
+    },
   };
 }
 

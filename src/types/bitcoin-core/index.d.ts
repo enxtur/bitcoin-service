@@ -1,4 +1,10 @@
 declare module "bitcoin-core" {
+
+  interface Transaction {
+    txid: string;
+    confirmations: number;
+  }
+
   export default class BitcoinCore {
     constructor(config: any);
     getBestBlockHash(): Promise<string>;
@@ -44,6 +50,6 @@ declare module "bitcoin-core" {
       address: string,
       minConfirmation?: number = 0
     ): Promise<number>;
-    getTransaction(txid: string, includeWatchonly?: boolean, verbose?: boolean): Promise<any>;
+    getTransaction(txid: string, includeWatchonly?: boolean, verbose?: boolean): Promise<Transaction>;
   }
 }
