@@ -19,6 +19,7 @@ async function onHashtx(io: Server, txHash: string) {
   try {
     const trx = await bitcoinClient.getTransaction(txHash);
     if (trx.confirmations > 0) {
+      console.log(`New transaction: ${txHash}`)
       io.to("hashtx").emit("hashtx", trx);
     }
   } catch(e: any) {

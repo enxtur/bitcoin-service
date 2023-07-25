@@ -51,5 +51,6 @@ declare module "bitcoin-core" {
       minConfirmation?: number = 0
     ): Promise<number>;
     getTransaction(txid: string, includeWatchonly?: boolean, verbose?: boolean): Promise<Transaction>;
+    getBlockCount(): Promise<number>;
   }
 }
